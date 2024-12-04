@@ -1,1 +1,5 @@
-Here we use the transaction to create a series from the admin account. We borrow a reference to the Admin resource and then use it to execute the addSeries function.
+This transaction is used to create a new series using the admin account. It begins by borrowing a reference to the Admin resource stored in the account’s storage. If the Admin resource cannot be borrowed, the transaction will terminate with an error.
+
+Once the reference to the Admin resource is obtained, the transaction calls the addSeries function to create a new series. The function is provided with a seriesId and metadata to define the new series. After successfully adding the series, the transaction logs a confirmation message.
+
+This process ensures that only accounts with access to the Admin resource can create new series.

@@ -1,5 +1,7 @@
-An admin resource can be created and used as a way to only give access to certain key functions to specific accounts. In this instance our Admin resource contains the ability to create a series and the ability to borrow and return a Series resource.
+The Recipe contract manages access to important functions using a special resource called Admin. This resource ensures that only authorized accounts can perform certain key actions.
 
-Additionaly, this admin resource can create a new admin resource and give somebody else the ability to have access to this resource in their account.
+The Admin resource has two main functions. The first, addSeries, lets you create a new series. It checks that the series doesn’t already exist before creating it, which helps keep the data accurate. The second, borrowSeries, allows you to securely borrow a reference to an existing series, but only if the series already exists.
 
-At the end, when you are initializing your contract you are creating the Admin resource and saving it into the deployer of the smart contracts account. You would also create a private capability to the Admin account for a reference to all of the functions.
+The Admin resource can also create another Admin resource using the createNewAdmin function. This means you can give someone else the ability to access and use the Admin resource in their own account. This allows for controlled sharing of administrative permissions.
+
+When the contract is deployed, it creates an initial Admin resource and stores it in the deployer’s account. It also creates a private capability, which allows the deployer to securely access the Admin resource and use all its functions.
