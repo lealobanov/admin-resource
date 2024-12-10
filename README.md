@@ -9,7 +9,7 @@ Using an admin resource to have exclusive access to functions in a smart contrac
 - [Description](#description)
 - [What is included in this repository?](#what-is-included-in-this-repository)
 - [Supported Recipe Data](#recipe-data)
--[Deploying Recipe Contracts and Running Transactions Locally (Flow Emulator)](#deploying-recipe-contracts-and-running-transactions-locally-flow-emulator)
+- [Deploying Recipe Contracts and Running Transactions Locally (Flow Emulator)](#deploying-recipe-contracts-and-running-transactions-locally-flow-emulator)
 - [License](#license)
 
 ## Description
