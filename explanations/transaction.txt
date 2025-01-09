@@ -1,1 +1,5 @@
-Here we use the transaction to create a series from the admin account. We borrow a reference to the Admin resource and then use it to execute the addSeries function.
+This transaction demonstrates how to create and utilize an Admin resource for the ExampleNFT contract. It begins by checking if the Admin resource already exists in the account's storage at the path /storage/nftAdminResource.
+
+ If the Admin resource does not exist, the transaction calls the createAdmin function from the ExampleNFT contract to generate a new Admin resource.
+
+ After saving the Admin resource, the transaction borrows a reference to it from storage to perform further operations. Using this reference, it mints a new NFT by calling the mintNFT function of the Admin resource. The transaction then borrows the account's NFT collection from storage, ensuring it exists at the path specified by ExampleNFT.CollectionStoragePath. Finally, the newly minted NFT is deposited into the account's collection using the deposit function. 
